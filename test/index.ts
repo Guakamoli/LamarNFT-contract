@@ -223,7 +223,7 @@ describe(CollectionConfig.contractName, function () {
     }
 
     const alreadyMinted = 6;
-    const maxMintAmountPerTx = 1000;
+    const maxMintAmountPerTx = 7777;
     const iterations = Math.floor((CollectionConfig.maxSupply - alreadyMinted) / maxMintAmountPerTx);
     const expectedTotalSupply = iterations * maxMintAmountPerTx + alreadyMinted;
     const lastMintAmount = CollectionConfig.maxSupply - expectedTotalSupply;
