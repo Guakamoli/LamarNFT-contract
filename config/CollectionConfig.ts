@@ -13,7 +13,8 @@ const CollectionConfig: CollectionConfigInterface = {
   tokenName: 'My NFT Token',
   tokenSymbol: 'MNT',
   hiddenMetadataUri: 'ipfs://__CID__/hidden.json',
-  maxSupply: 10000,
+  maxSupply: 7777,
+  royaltyFraction: 250,
   whitelistSale: {
     price: 0.05,
     maxMintAmountPerTx: 1,
