@@ -4,10 +4,10 @@ async function main() {
   const contract = await NftContractProvider.getContract();
 
   if (!process.env.PRE_MINT_ADDRESS) {
-    console.log("pre mint address not found. use `MINT_ADDRESS=0x?`");
+    throw new Error("pre mint address not found. use `PRE_MINT_ADDRESS=0x?`");
   }
 
-  const mintAddress = String(process.env.MINT_ADDRESS);
+  const mintAddress = String(process.env.PRE_MINT_ADDRESS);
   const preMintMaxAmount = 2777;
   await contract.setMaxMintAmountPerTx(preMintMaxAmount);
   await contract.mintForAddress(preMintMaxAmount, mintAddress);
