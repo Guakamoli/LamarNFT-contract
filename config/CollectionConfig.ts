@@ -14,12 +14,12 @@ const CollectionConfig: CollectionConfigInterface = {
   // The contract name can be updated using the following command:
   // yarn rename-contract NEW_CONTRACT_NAME
   // Please DO NOT change it manually!
-  contractName: "LamarMetaverse",
-  tokenName: "Lamar Metaverse Nft Token",
-  tokenSymbol: "LMNT",
+  contractName: "LamarOdomMetaverse",
+  tokenName: "Lamar Odom's Metaverse Token",
+  tokenSymbol: "LOMT",
   // hiddenMetadataUri: "ipfs://__CID__/hidden.json",
   hiddenMetadataUri:
-    "ipfs://bafkreictmtoisazizfrqt2hicqn73owx6rjpguv3fczycjiv5c2crfpsui",
+    "ipfs://bafkreid533zkyqlqtuh3ufod7seck7hpnahx2xuofxx462xhnv2wjgc7fi",
   maxSupply: 7777,
   whitelistSale: {
     price: 0,
@@ -34,7 +34,7 @@ const CollectionConfig: CollectionConfigInterface = {
     maxMintAmountPerTx: 1,
   },
   contractAddress: "some_contract_address",
-  marketplaceIdentifier: "lamar-metaverse-nft-token",
+  marketplaceIdentifier: "lamar-odom-metaverse-token",
   marketplaceConfig: Marketplaces.openSea,
   whitelistAddresses,
 };

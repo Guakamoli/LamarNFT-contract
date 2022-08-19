@@ -17,7 +17,7 @@ yarn deploy --network testnet
 $ hardhat run scripts/1_deploy.ts --network testnet
 No need to generate any newer typings.
 Deploying contract...
-Contract deployed to: 0xDece27610D9AF956b9a013169c7b45f79F4Cb75c
+Contract deployed to: 0x60C6FF5cA1a588eafc92683C97e2c9f60b724705
 ✨  Done in 30.40s.
 ```
 
@@ -59,12 +59,12 @@ Public sale is now closed!
 ### 5.揭幕
 
 ```
-COLLECTION_URI_PREFIX=ipfs://bafybeifdj3xhzbl67537lp44yqvs53sw5y4mn5ffwjk7vfkxqzi3u26qve/metadata/ yarn reveal --network testnet
+COLLECTION_URI_PREFIX=ipfs://bafybeiceqmznqdylhjunfunbmxp3nx4glyxbakgd3dtfiogwabsauia6rm/metadata/ yarn reveal --network testnet
 
 // 揭幕结果
 $ hardhat run scripts/8_reveal.ts --network testnet
 No need to generate any newer typings.
-Updating the URI prefix to: ipfs://bafybeifdj3xhzbl67537lp44yqvs53sw5y4mn5ffwjk7vfkxqzi3u26qve/metadata/
+Updating the URI prefix to: ipfs://bafybeiceqmznqdylhjunfunbmxp3nx4glyxbakgd3dtfiogwabsauia6rm/metadata/
 Revealing the collection...
 Your collection is now revealed!
 ✨  Done in 111.41s.
