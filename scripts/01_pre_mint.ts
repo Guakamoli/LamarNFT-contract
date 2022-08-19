@@ -8,7 +8,7 @@ async function main() {
   }
 
   const mintAddress = String(process.env.PRE_MINT_ADDRESS);
-  const preMintMaxAmount = 2;
+  const preMintMaxAmount = 2777;
   await contract.setMaxMintAmountPerTx(preMintMaxAmount);
   await contract.mintForAddress(preMintMaxAmount, mintAddress);
   console.log("pre mint success!");

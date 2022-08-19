@@ -107,7 +107,7 @@ task(
 
     // Replace names in source files
     replaceInFile(
-      __dirname + "/../minting-dapp/src/scripts/lib/NftContractType.ts",
+      __dirname + "/../components/Container/lib/NftContractType.ts",
       CollectionConfig.contractName,
       taskArgs.newName
     );

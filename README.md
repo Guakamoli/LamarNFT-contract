@@ -14,19 +14,25 @@
 yarn deploy --network testnet
 
 // 部署的结果
+$ hardhat run scripts/1_deploy.ts --network testnet
+No need to generate any newer typings.
 Deploying contract...
-Contract deployed to: 0xA6Eff17EE863237a69b2e83f89553C3fdB377491
+Contract deployed to: 0xDece27610D9AF956b9a013169c7b45f79F4Cb75c
+✨  Done in 30.40s.
 ```
 
 ### 2. 铸造两个到指定地址
+
+需要修改 `config/CollectionConfig.ts` 中的 `contractAddress`
 
 ```
 PRE_MINT_ADDRESS=0x5E5A60aCd43cd5f3aA4F2507fa0A4bAc4c8725a1 yarn pre-mint --network testnet
 
 // 铸造的结果
+$ hardhat run scripts/01_pre_mint.ts --network testnet
 No need to generate any newer typings.
 pre mint success!
-✨  Done in 36.73s.
+✨  Done in 51.38s.
 ```
 
 ### 3. 公开销售
@@ -34,6 +40,7 @@ pre mint success!
 ```
 yarn public-sale-open --network testnet
 
+// 公开销售的结果
 Updating the max mint amount per TX to 1...
 Unpausing the contract...
 Public sale is now open!
@@ -44,6 +51,7 @@ Public sale is now open!
 ```
 yarn public-sale-close --network testnet
 
+// 关闭公开销售的结果
 Pausing the contract...
 Public sale is now closed!
 ```
@@ -53,9 +61,11 @@ Public sale is now closed!
 ```
 COLLECTION_URI_PREFIX=ipfs://bafybeifdj3xhzbl67537lp44yqvs53sw5y4mn5ffwjk7vfkxqzi3u26qve/metadata/ yarn reveal --network testnet
 
-
-// 结果
-Updating the URI prefix to: ipfs://bafybeigyux7vso6g6lveg4bpkcfbjtfqvva4cwl2hgj4qbgp3sdwht4wn4/metadata/
+// 揭幕结果
+$ hardhat run scripts/8_reveal.ts --network testnet
+No need to generate any newer typings.
+Updating the URI prefix to: ipfs://bafybeifdj3xhzbl67537lp44yqvs53sw5y4mn5ffwjk7vfkxqzi3u26qve/metadata/
 Revealing the collection...
 Your collection is now revealed!
+✨  Done in 111.41s.
 ```
