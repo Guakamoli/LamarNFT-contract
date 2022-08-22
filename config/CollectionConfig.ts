@@ -8,31 +8,34 @@ import * as Marketplaces from "../lib/Marketplaces.ts";
 import whitelistAddresses from "./whitelist.json";
 
 const CollectionConfig: CollectionConfigInterface = {
-  testnet: Networks.hardhatLocal,
+  // testnet: Networks.hardhatLocal,
+  testnet: Networks.ethereumTestnetGoerli,
   mainnet: Networks.ethereumMainnet,
   // The contract name can be updated using the following command:
   // yarn rename-contract NEW_CONTRACT_NAME
   // Please DO NOT change it manually!
-  contractName: "YourNftToken",
-  tokenName: "My NFT Token",
-  tokenSymbol: "MNT",
-  hiddenMetadataUri: "ipfs://__CID__/hidden.json",
+  contractName: "LamarOdomMetaverse",
+  tokenName: "Lamar Odom's Metaverse Token",
+  tokenSymbol: "LOMT",
+  // hiddenMetadataUri: "ipfs://__CID__/hidden.json",
+  hiddenMetadataUri:
+    "ipfs://bafkreid533zkyqlqtuh3ufod7seck7hpnahx2xuofxx462xhnv2wjgc7fi",
   maxSupply: 7777,
   royaltyFraction: 250,
   whitelistSale: {
-    price: 0,
+    price: 0.01,
     maxMintAmountPerTx: 1,
   },
   preSale: {
-    price: 0,
-    maxMintAmountPerTx: 1,
+    price: 0.03,
+    maxMintAmountPerTx: 2,
   },
   publicSale: {
-    price: 0,
+    price: 0.1,
     maxMintAmountPerTx: 1,
   },
-  contractAddress: "0x5FbDB2315678afecb367f032d93F642f64180aa3",
-  marketplaceIdentifier: "my-nft-token",
+  contractAddress: "some_contract_address",
+  marketplaceIdentifier: "lamar-odom-metaverse-token",
   marketplaceConfig: Marketplaces.openSea,
   whitelistAddresses,
 };

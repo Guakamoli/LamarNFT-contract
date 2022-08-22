@@ -55,10 +55,12 @@ describe(CollectionConfig.contractName, function () {
 
   it('Contract deployment', async function () {
     const Contract = await ethers.getContractFactory(CollectionConfig.contractName);
+    // @ts-ignore
     contract = await Contract.deploy(...ContractArguments) as NftContractType;
     await contract.deployed();
 
-    await expect(Contract.deploy(...ContractArguments.slice(0, 6), 10001)).to.be.revertedWith('ERC2981: royalty fee will exceed salePrice');
+    // @ts-ignore
+    await expect((Contract.deploy(...ContractArguments.slice(0, 6), 10001)) as NftContractType).to.be.revertedWith('ERC2981: royalty fee will exceed salePrice');
   });
 
   it('Check initial data', async function () {
