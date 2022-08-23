@@ -1,4 +1,5 @@
 import NftContractProvider from "../lib/NftContractProvider";
+import CollectionConfig from "./../config/CollectionConfig";
 
 async function main() {
   const contract = await NftContractProvider.getContract();
@@ -11,6 +12,9 @@ async function main() {
   const preMintMaxAmount = 2777;
   await contract.setMaxMintAmountPerTx(preMintMaxAmount);
   await contract.mintForAddress(preMintMaxAmount, mintAddress);
+  await contract.setMaxMintAmountPerTx(
+    CollectionConfig.whitelistSale.maxMintAmountPerTx
+  );
   console.log("pre mint success!");
 }
 
